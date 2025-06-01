@@ -239,3 +239,9 @@ context = torch.zeros((1,1), dtype=torch.long, device = device)
 print(decode(model.generate(context, max_new_tokens=100)[0].tolist()))
 
 
+# %%
+
+# Save the model's state dictionary
+torch.save(model.state_dict(), 'bigram_model.pth')
+
+# %%
